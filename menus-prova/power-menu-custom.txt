@@ -1,3 +1,0 @@
-Name=Shutdown|Exec=~/.config/scripts/power-off|Terminal=true
-Name=Reboot|Exec=reboot
-Name=Lock|Exec=swaylock|Terminal=true
