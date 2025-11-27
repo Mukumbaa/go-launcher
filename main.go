@@ -27,7 +27,7 @@ type model struct {
 func initialModel() model {
 	loadConfig()
 	ti := textinput.New()
-	ti.Placeholder = "Search app..."
+	ti.Placeholder = "Search..."
 	ti.Focus()
 	ti.CharLimit = 156
 	ti.Width = 50
