@@ -6,4 +6,4 @@ Name=Keybindings|Exec=hx ~/.config/hypr/keybindings.conf|Terminal=true
 Name=Hyprpaper|Exec=hx ~/.config/hypr/hyprpaper.conf|Terminal=true
 Name=Default Programs|Exec=hx ~/.config/hypr/default-programs.conf|Terminal=true
 Name=Alacritty|Exec=hx ~/.config/alacritty/alacritty.toml|Terminal=true
-Name=Alias|Exec=hx ~/.config/bash-config/aliases|Terminal=true
+ame=Alias|Exec=hx ~/.config/bash-config/aliases|Terminal=true
