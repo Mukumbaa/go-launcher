@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var pathConfig = "./menus-prova/go-launcher.config"
+var pathConfig = "/home/mukumba/.config/go-launcher/go-launcher.config"
 func loadConfig(){
 	
 	file, err := os.Open(pathConfig)
