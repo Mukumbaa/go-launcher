@@ -237,7 +237,6 @@ func main() {
 }
 
 func launchApp(app *AppEntry) {
-	fmt.Printf("%v\n%v\n",app.Exec,BROWSER)
 	cmdStr := app.Exec
 
 	if app.Terminal {
