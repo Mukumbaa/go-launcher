@@ -132,7 +132,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		
 		if searchText == "" {
 			displayName = "Google search:"
-			execCmd = "google-chrome-stable"
+			execCmd = ""
 			m.filteredApps = []AppEntry{} 
 		} else {
 			encodedQuery := url.QueryEscape(searchText)
@@ -237,6 +237,7 @@ func main() {
 }
 
 func launchApp(app *AppEntry) {
+	fmt.Printf("%v\n%v\n",app.Exec,BROWSER)
 	cmdStr := app.Exec
 
 	if app.Terminal {

@@ -44,7 +44,7 @@ func loadConfig(){
 		value := strings.TrimSpace(parts[1])
 
 		switch key{
-			case "Brower":
+			case "Browser":
 				BROWSER = value
 			case "Terminal":
 				TERMINAL = value
