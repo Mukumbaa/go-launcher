@@ -1,4 +1,4 @@
-module go-launcher
+module algo
 
 go 1.25.4
 
