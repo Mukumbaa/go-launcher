@@ -1,5 +1,9 @@
 package main
-import(
+
+import (
+	"bufio"
+	"os"
+
 	"github.com/charmbracelet/lipgloss"
 )
 
@@ -24,20 +28,36 @@ type Theme struct{
 	indicator     lipgloss.Style
 }
 
+
+
+var selectedStyle = SelectedStyle{}
+var text = TextStyle{}
+var input = InputStyle{}
+
+func getDefault(){
+	
+	selectedStyle.backgroundColor = "#ffffff"
+	selectedStyle.textColor = "#000000"
+	text.textColor = "#ffffff"
+	input.textColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
+	input.placeholderColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#808080"))
+	input.promptColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
+	selectedStyle.indicator = "#ffffff"
+}
+
 func loadTheme(themeName string) Theme{
 
-	selectedStyle := SelectedStyle{}
-	text := TextStyle{}
-	input := InputStyle{}
 	switch themeName{
 		case "default":
-			selectedStyle.backgroundColor = "#ffffff"
-			selectedStyle.textColor = "#000000"
-			text.textColor = "#ffffff"
-			input.textColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
-			input.placeholderColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#808080"))
-			input.promptColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
-			selectedStyle.indicator = "#ffffff"
+			// selectedStyle.backgroundColor = "#ffffff"
+			// selectedStyle.textColor = "#000000"
+			// text.textColor = "#ffffff"
+			// input.textColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
+			// input.placeholderColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#808080"))
+			// input.promptColor = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
+			// selectedStyle.indicator = "#ffffff"
+			getDefault()
+
 		case "rose-pine":
 			selectedStyle.backgroundColor = "#403d52"
 			selectedStyle.textColor = "#e0def4"
@@ -67,5 +87,17 @@ func loadTheme(themeName string) Theme{
 }
 
 func loadThemeFromFile(){
-	
+	file, err := os.Open("/home/mukumba/.config/go-launcher/theme.conf")
+	if err != nil {
+        return
+    }
+
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+
+	for scanner.Scan(){
+		
+	}
+    
 }
