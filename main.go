@@ -197,7 +197,7 @@ func (m model) View() string {
 			var line string
 
 			if m.cursor == i {
-				indicator := "> "
+				indicator := "● "
 				// line = theme.indicator.Render(indicator)
 				line = theme.Indicator.Render(indicator)
 				text := fmt.Sprintf("%s", appName)
