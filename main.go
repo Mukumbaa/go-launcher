@@ -125,8 +125,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	
 	query := strings.TrimSpace(rawInput)
 	
-	if strings.HasPrefix(rawInput, "?") {
-		searchText := strings.TrimSpace(strings.TrimPrefix(rawInput, "?"))
+	if after, ok :=strings.CutPrefix(rawInput, "?"); ok  {
+		searchText := strings.TrimSpace(after)
 		
 		var displayName string
 		var execCmd string
