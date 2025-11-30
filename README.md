@@ -1,4 +1,4 @@
-# Windows rule
+# Windows rule for Hyprland
 ```
 windowrulev2 = float, class:^(algo)$
 windowrulev2 = pin, class:^(algo)$
@@ -23,6 +23,12 @@ input_text=#e0def4
 input_placeholder=#808080
 input_prompt=#c4a7e7
 ```
+
+## Pre made themes
++ default (auto detects dark or light)
++ default-dark
++ default-light
++ rose-pine
 
 # custom file (example)
 ```
