@@ -176,9 +176,17 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 
+var fixedWidth = 30
+var fixedHeight = 16 
+
 func (m model) View() string {
 	var b strings.Builder
     b.WriteString(fmt.Sprintf("\033]11;%s\007", theme.Background)) // OSC sequence
+
+	if m.height < fixedHeight || m.width < fixedWidth{
+		return lipgloss.Place(m.width,m.height,lipgloss.Center,lipgloss.Center,"Too small")
+	}
+    
 	b.WriteString(m.textInput.View())
 	b.WriteString("\n\n")
 
@@ -221,8 +229,6 @@ func (m model) View() string {
 			b.WriteString(line)
 		}
 	}
-    const fixedWidth = 30
-    const fixedHeight = 16 
 
     style := theme.Box.
         Width(fixedWidth).
