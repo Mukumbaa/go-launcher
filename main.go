@@ -18,7 +18,7 @@ import (
 
 var TERMINAL string = "alacritty"
 var BROWSER string = "firefox"
-var THEME string = "default"
+var THEME string = ""
 var theme Theme
 
 type model struct {
