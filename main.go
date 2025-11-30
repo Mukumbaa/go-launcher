@@ -235,6 +235,7 @@ func (m model) View() string {
         return content
     }
 
+
     return lipgloss.Place(
         m.width, m.height,
         lipgloss.Center, lipgloss.Center,
@@ -242,6 +243,8 @@ func (m model) View() string {
     )
     // return theme.Box.Render(b.String())
 }
+
+
 func main() {
 	p := tea.NewProgram(initialModel(), tea.WithAltScreen())
 	
