@@ -26,7 +26,7 @@ func DefaultPalette() Palette {
 	if lipgloss.HasDarkBackground() {
 		
 		return Palette{
-			Background:       "#000000",
+			Background:       "#100d08",
 			TextColor:        "#ffffff",
 			SelectedBg:       "#ffffff",
 			SelectedText:     "#000000",
